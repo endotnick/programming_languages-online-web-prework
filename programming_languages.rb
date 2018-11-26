@@ -5,7 +5,7 @@ def reformat_languages(input)
       reformatted[language] = attributes
       style = [] || reformatted[language][:style]
       style << coding_style
-      reformatted[language][:style] = [style]
+      reformatted[language][:style] = style
     end
   end
   reformatted
