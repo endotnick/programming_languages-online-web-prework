@@ -2,7 +2,7 @@ def reformat_languages(input)
   reformatted = {}
   input.each do |style, languages|
     languages.each do |language, attributes|
-      if reformatted.has_key?(language)
+      if reformatted[language]
         reformatted[language][:style] << style
       else
         reformatted[language] = attributes
