@@ -7,6 +7,7 @@ def reformat_languages(input)
       else
         reformatted[language] = attributes
         reformatted[language][:style] = [style]
+      end
     end
   end
   reformatted
