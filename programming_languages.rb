@@ -3,8 +3,8 @@ def reformat_languages(input)
   input.each do |style, languages|
     languages.each do |language, attributes|
       reformatted[language] = attributes
-      reformatted[language][:style] = style
+      reformatted[language][:style] << style
     end
   end
-  reformatted  
+  reformatted
 end
