@@ -1,13 +1,11 @@
 def reformat_languages(input)
   reformatted = {}
-  input.each do |style, languages|
+  input.each do |coding_style, languages|
     languages.each do |language, attributes|
       reformatted[language] = attributes
-      if reformatted[language][:style]
-        reformatted[language][:style] << style
-      else
-        reformatted[language][:style] = [style]
-      end
+      style = [] || reformatted[language][:style]
+      style << coding_style
+      reformatted[language][:style] = [style]
     end
   end
   reformatted
